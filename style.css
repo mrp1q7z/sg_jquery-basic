@@ -1,0 +1,27 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  float: left;
+  text-align: center;
+  overflow: hidden;
+  padding: 10px;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+.clearfix {
+  clear: both;
+}
+#search_tool {
+  border: 2px solid #fff;
+}
+#search_tool:hover {
+  background-color: #ccc;
+  border-color: #00f;
+}
+#menu2 {
+  display:none;
+}

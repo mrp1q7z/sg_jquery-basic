@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery sample</title>
+  <link href="style.css" rel="stylesheet" media="all">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+$(document).ready(function(){
+  $("#search_tool").click(function(){
+    if($("#menu2").is(':visible')) {
+      $("#menu1").slideDown();
+      $("#menu2").slideUp();
+      $(this).css("background", "");
+      $(this).css("border-color", "");
+    } else {
+      $("#menu1").slideUp();
+      $("#menu2").slideDown();
+      $(this).css("background", "#eee");
+      $(this).css("border-color", "#00f");
+    }
+  });
+});
+  </script>
+</head>
+<body>
+<form action="xxx">
+  <input type="search" name="input" size="50">
+  <input type="submit" value="検索">
+</form>
+<ul>
+  <li><a href="#">ウェブ</a></li>
+  <li><a href="#">ニュース</a></li>
+  <li><a href="#">ショッピング</a></li>
+  <li><a href="#">地図</a></li>
+  <li><a href="#">画像</a></li>
+  <li><a href="#">もっと見る</a></li>
+  <li><a href="#" id="search_tool">検索ツール</a></li>
+</ul>
+<ul id="menu1" class="clearfix">
+  <li>約 605,000 件 （0.19 秒）</li>
+</ul>
+<ul id="menu2" class="clearfix">
+  <li><a href="#">すべての言語</a></li>
+  <li><a href="#">期間指定なし</a></li>
+  <li><a href="#">すべての結果</a></li>
+</ul>
+</body>
+</html>
